@@ -4,9 +4,10 @@ export class Animal {
     public name: string,
     public diet: string,
     public location: string,
-    public caretakers: number,
+    public careTakers: number,
     public sex: string,
     public likes: string,
     public dislikes: string,
+    public age: number
     ) { }
 }

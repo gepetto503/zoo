@@ -13,8 +13,10 @@ import { Animal } from './animal.model';
         </animal-list>
         <div class="flex-mom">
           <!--square brackets is the output in the child file, round brackets is the input-->
-          <add-animal (addAnimalOutput)="addAnimal($event)"></add-animal>
-          <edit-animal [editAnimalSelector]="selectedAnimal"></edit-animal>
+          <edit-animal [editAnimalSelector]="selectedAnimal">
+          </edit-animal>
+          <add-animal (addAnimalOutput)="addAnimal($event)">
+          </add-animal>
         </div>
      </div>
   `
@@ -22,7 +24,8 @@ import { Animal } from './animal.model';
 
 export class AppComponent {
   animals: Animal[] = [
-    new Animal('Arctic Fox', 'Moon', 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool Shade', 'Loud Noises'),
+    new Animal('Arctic Fox', 'Moon', 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool Shade', 'Loud Noises', 1),
+    new Animal('Hound Dog', 'Bong The Dog', 'Carnivore', 'you know, around', 2, 'Male', 'Cool Shades', 'Cops', 4),
     ];
 
   selectedAnimal: Animal = this.animals[0];
