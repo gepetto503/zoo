@@ -2,13 +2,13 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
 import { FormsModule }  from '@angular/forms';
-import { BeerListComponent } from './beer-list.component';
-import { AddKegComponent } from './add-keg.component';
-import { EditKegComponent } from './edit-keg.component';
+import { AnimalListComponent } from './animal-list.component';
+import { AddAnimalComponent } from './add-animal.component';
+import { EditAnimalComponent } from './edit-animal.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, BeerListComponent, AddKegComponent, EditKegComponent ],
+  declarations: [ AppComponent, AnimalListComponent, AddAnimalComponent, EditAnimalComponent ],
   bootstrap:    [ AppComponent ]
 })
 

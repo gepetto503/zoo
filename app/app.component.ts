@@ -1,60 +1,41 @@
-import { Component } from '@angular/core';
-import { Keg } from './keg.model';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
   template: `
       <div class="hero">
-        <h1>BEER</h1>
       </div>
       <div class="container">
-        <h1 id="title">{{currentFocus}}</h1>
-        <!--[childKegs]="kegs" sends kegs array from this file to @Input() childKegs-->
-        <!--(clickSender="editBeer($event)" takes keg object from @Output() clickSender within beer-list.component.ts and passes it into editBeer method in the class description below.-->
-        <keg-list [childKegs]="kegs" (kegToEdit)="editKeg($event)" (kegToSell)="sellPint($event)"></keg-list>
+        <!--[childAnimals]="animals" sends animals array from this file to @Input() childAnimals-->
+        <!--(clickSender="editBeer($event)" takes animal object from @Output() clickSender within beer-list.component.ts and passes it into editBeer method in the class description below.-->
+        <animal-list [childAnimals]="animals" (animalToEdit)="editAnimal($event)">
+        </animal-list>
         <div class="flex-mom">
           <!--square brackets is the output in the child file, round brackets is the input-->
-          <add-keg (addKegOutput)="addKeg($event)"></add-keg>
-          <edit-keg [editKegSelector]="selectedKeg"></edit-keg>
+          <add-animal (addAnimalOutput)="addAnimal($event)"></add-animal>
+          <edit-animal [editAnimalSelector]="selectedAnimal"></edit-animal>
         </div>
      </div>
   `
 })
 
 export class AppComponent {
-  currentFocus: string = 'Klippkroog Scandinavian TapRoom';
-  kegs: Keg[] = [
-    new Keg('Forelskaet', 1, 5.2),
-    new Keg('Morfar, Farmor', 2, 6),
-    new Keg('Ogooglebar IPA', 2, 7)
+  animals: Animal[] = [
+    new Animal('Arctic Fox', 'Moon', 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool Shade', 'Loud Noises'),
     ];
 
-  selectedKeg: Keg = this.kegs[0];
+  selectedAnimal: Animal = this.animals[0];
 
-  //we need parameters from the add keg component to feed into this method
-  addKeg(newKegFromChild: Keg) {
-    this.kegs.push(newKegFromChild);
+  //we need parameters from the add animal component to feed into this method
+  addAnimal(newAnimalFromChild: Animal) {
+    this.animals.push(newAnimalFromChild);
   }
 
-  editKeg(currentKeg) {
-    // makes whichever keg the user clicked the button on become stored in the selected keg variable.
-    this.selectedKeg = currentKeg;
+  editAnimal(currentAnimal) {
+    // makes whichever animal the user clicked the button on become stored in the selected animal variable.
+    this.selectedAnimal = currentAnimal;
   }
 
-  sellPint(clickedKeg: Keg) {
-    clickedKeg.pintsLeft -= 1;
-  }
-
-  fullnessColor(currentKeg) {
-    if (currentKeg.pintsLeft <= 10) {
-      return "bg-danger";
-    }
-    if (currentKeg.pintsLeft <= 55) {
-      return "bg-warning";
-    } else {
-      return "bg-info";
-    }
-
-  }
 
 }
