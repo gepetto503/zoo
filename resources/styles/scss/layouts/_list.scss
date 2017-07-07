@@ -1,17 +1,24 @@
+select {
+  // display: block;
+  // margin: auto;
+
+}
+
 .animal-list {
-  border: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .animal {
-  padding: 0 30px;
 
 
   // &:nth-child(odd) {
-  //   background: #f6f1ed;
+  //   background: $color2;
   // }
 
   .details {//flex parent
-    border: 1px dashed grey;
+
 
   }
 }
