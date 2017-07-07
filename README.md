@@ -6,7 +6,14 @@
 
 ## Description
 
-_This app allows Zoo staff to view a list of animals, including the details listed below, add a new animal, filter animals in the manner listed below, and edit an animal's details_
+_This app allows Zoo staff to view a list of animals, including the details listed below._
+
+![Screen Shot 1](/resources/img/zoo_snip_1.jpg)
+
+ _User can add a new animal, filter animals by age, and edit an animal's details_
+
+ ![Screen Shot 2](/resources/img/zoo_snip_1.jpg)
+
 
 ### Animal Details
 * _Species_
@@ -27,6 +34,11 @@ _(Wishlist)_
 _(Wishlist)_
 * _View only male or female_
 * _View animals by category_
+
+
+
+
+
 
 ## Setup/Installation Requirements
 * _Install npm, gulp, bower, sass and typescript globally if you haven't already._
