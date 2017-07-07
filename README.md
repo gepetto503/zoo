@@ -8,11 +8,11 @@
 
 _This app allows Zoo staff to view a list of animals, including the details listed below._
 
-![Screen Shot 1](resources/img/zoo_snip_1.png)
+![Screen Shot 1](https://github.com/gepetto503/zoo/blob/master/resources/img/zoo_snip_1.PNG)
 
  _User can add a new animal, filter animals by age, and edit an animal's details_
 
- ![Screen Shot 2](resources/img/zoo_snip_1.png)
+ ![Screen Shot 2](https://github.com/gepetto503/zoo/blob/master/resources/img/zoo_snip_2.PNG)
 
 
 ### Animal Details
